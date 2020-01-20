@@ -1,5 +1,6 @@
-console.log('hi')
-
-for (let i = 0;i<10;i++){
-    console.log(i)
-}
+const express = require("express")
+const app = express();
+app.get('/', (req, res) => {
+    res.send('<h1>Hello World!</h1>');
+});
+var server = app.listen(80, () => { console.log('server started') });
